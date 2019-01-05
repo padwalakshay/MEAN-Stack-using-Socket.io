@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app="IndexApp">
+<head>
+	<title>OnlineChat</title>
+	<script type="text/javascript">
+		var pageName = "index";
+	</script>
+	<script type="text/javascript" src="/scripts/importCss.js"></script>
+</head>
+<body ng-controller="dashboardctr as dash">
+	<div class="container">
+<div class="col-md-12 col-sm-12 col-xs-12 page-header">
+  <h1>Chat<small> Application</small><span style="float:right"><small>welcome:<b>{{dash.name}}</b></small></span><span style ="float:right;cursor:pointer;margin-right:10px" ng-click="dash.logout()"><small>Logout</small></span></h1>
+</div>
+<div class="col-md-12 col-sm-12 col-xs-12">
+  <div class="col-md-12 col-sm-12 col-xs-12" style="position:relative;height:400px;background-color: #fff" >
+    <div id="chatwrapper" style="max-height:300px;overflow:hidden"></div>
+    <div class="col-md-12 col-sm-12 col-xs-12" style="position:absolute;bottom: 0;
+  left: 0;" >
+    <div class="col-md-10 col-sm-10 col-xs-10" style="padding:0px">
+      <input type="text" class="form-control" ng-model="dash.inputsender" ng-keyup="dash.keyupfunct($event)" style="width:100%">
+    </div>
+    <div class="col-md-2 col-sm-2 col-xs-2" style="padding:0px;margin-left: 0 px" >
+      <button  id="sender" ng-click="dash.sendchats()" type="button" class="btn btn-primary" style="float: right">send</button>
+    </div>
+  </div>
+</div>
+   <!-- <div class="col-md-6 col-sm-6 col-xs-6">
+<ul class="list-group">
+  
+</ul>
+   </div> -->
+</div>
+</div>
+</body>
+    <script type="text/javascript" src="/scripts/importJS.js"></script>
+</html>
